@@ -4,4 +4,4 @@ In this repository you will find a series of tutorials, described in different [
 
 ### ClickHouse Terraform
 
-In the `clickhouse_terraform` folder you'll find scripts required to integrate ClickHouse with Terraform and Kubernetes trough helm charts. For more context feel free to read the original [medium post](https://medium.com/@brendavarguez21/deploying-clickhouse-on-a-kubernetes-cluster-using-terraform-d4e2234c27af)!
+In the `clickhouse_terraform` folder you'll find scripts required to integrate ClickHouse with Terraform and Kubernetes through helm charts. For more context feel free to read the original [medium post](https://medium.com/@brendavarguez21/deploying-clickhouse-on-a-kubernetes-cluster-using-terraform-d4e2234c27af)!
