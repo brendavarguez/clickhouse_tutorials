@@ -5,3 +5,7 @@ In this repository you will find a series of tutorials, described in different [
 ### ClickHouse Terraform
 
 In the `clickhouse_terraform` folder you'll find scripts required to integrate ClickHouse with Terraform and Kubernetes through helm charts. For more context feel free to read the original [medium post](https://medium.com/@brendavarguez21/deploying-clickhouse-on-a-kubernetes-cluster-using-terraform-d4e2234c27af)!
+
+### ClickHouse Users
+
+In the `clickhouse_users` folder you can find the original scripts from `clickhouse_terraform` with the necessary modifications to create new users with the required grants according to the needs of each one of them. If you want a detailed explanation of the new configs you can always consult the original post, [Creating multiple users in ClickHouse from Terraform](https://medium.com/@brendavarguez21/creating-multiple-users-in-clickhouse-from-terraform-998ccfa6c44a).
