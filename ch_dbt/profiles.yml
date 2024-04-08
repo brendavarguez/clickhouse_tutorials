@@ -1,0 +1,34 @@
+analytics:
+  target: dev # default schema where data will be sent
+
+  outputs:
+    dev: # this one will be used for testing locally
+      type: clickhouse
+      schema: warehouse_dev # ClickHouse database where your models will be built
+      user: "{{ env_var('CLICKHOUSE_DEV_USER') }}"
+      password: "{{ env_var('CLICKHOUSE_DEV_PASS') }}"
+      port: 9000
+      host: localhost
+      cluster: default
+      retries: 1
+      threads: 4 # max number of models to run at the same time
+      connect_timeout: 10
+      send_receive_timeout: 3600 # 1hr
+      use_lw_deletes: True # `delete+insert` as the default incremental strategy
+    
+    prd:
+      type: clickhouse
+      schema: prod_db
+      user: "{{ env_var('CLICKHOUSE_USER') }}"
+      password: "{{ env_var('CLICKHOUSE_PASS') }}"
+      port: 9000
+      host: clickhouse.data.svc # service-name.namespace.svc (K8s)
+      cluster: default
+      retries: 1
+      threads: 4
+      connect_timeout: 10
+      send_receive_timeout: 3600 # 1hr
+      use_lw_deletes: True # `delete+insert` as the default incremental strategy
+
+config:
+  send_anonymous_usage_stats: false
